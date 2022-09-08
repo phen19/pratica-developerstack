@@ -12,7 +12,7 @@ async function findById(id: number) {
   return prisma.question.findUnique({
     where: { id },
     include: {
-      answers: true
+      answers: {select: { answeredBy: true, answer: true }}
     }
   });
 }

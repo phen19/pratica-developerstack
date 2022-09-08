@@ -22,8 +22,8 @@ async function createAnswer(req: Request, res: Response) {
 async function get(req: Request, res: Response) {
   // TODO
   const questions = await questionService.findAll();
-  
-  res.send(questions);
+  const obj = { questions: questions}
+  res.send(obj);
 }
 
 async function getById(req: Request, res: Response) {

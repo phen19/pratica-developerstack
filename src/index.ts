@@ -12,7 +12,7 @@ app.use(json());
 app.use(router);
 app.use(errorHandlerMiddleware);
 
-const PORT = Number(process.env.PORT) || 5000;
+const PORT = Number(process.env.PORT) || 5001;
 app.listen(PORT, () => {
   console.log(`Servidor funfando de boas na porta: ${PORT}`);
 });
